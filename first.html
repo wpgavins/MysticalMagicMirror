@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<script>
+	function startTime(){
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var s = today.getSeconds();
+		m = checkTime(m);
+		s = checkTime(s);
+		document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+		var t = setTimeout(startTime,500);
+	}
+
+	function checkTime(i){
+		if(i<10){i= "0" + i};
+		return i;
+	}
+</script>
+ <head>
+<style>
+
+
+
+  </style>
+  </head>
+   
+   <title>MAJIC MIRROR</title>
+	<body style = "background-color:black" onload = "startTime()" >
+	<div  style= "color:white; font-size:75px;"  id= "txt" align="center" ></div>
+	<img src= "https://flavorwire.files.wordpress.com/2013/06/kanye3.jpg" alt="kanye"  width= 550 height =400 align= "center"> 
+	<h1  style = "color:blue;">This is Blue</h1>
+	</body>
+  
+  
+</html>
