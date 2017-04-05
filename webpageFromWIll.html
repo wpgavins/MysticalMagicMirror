@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- 1280x1024-->
+<html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+	function startTime(){
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var s = today.getSeconds();
+		m = checkTime(m);
+		s = checkTime(s);
+		document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+		var t = setTimeout(startTime,500);
+	}
+
+	function checkTime(i){
+		if(i<10){i= "0" + i};
+		return i;
+	}
+</script>
+<script>
+	function compliments(){
+	var x = Math.round(Math.random()*(4)+1);
+	var y = Math.round(Math.random()*(4)+1);	
+	var ph1 = "";
+	var ph2 = "";
+	
+	switch(x){
+		case 1:
+			ph1 = "do you always wake up so";
+			switch (y){
+					case 1:
+					ph2 = " loudly?";
+					break;
+					case 2:
+					ph2 = " nice lookin?";
+					break;
+					case 3:
+					ph2 = " tired looking?";
+					break;
+					case 4:
+					ph2 = " dead inside";
+					break;
+					case 5: 
+					ph2 = " ready to take on the day?";
+					break;
+					}
+			break;
+		case 2:
+			ph1 = "what's cookin";
+			switch (y){
+					case 1:
+					ph2 = " ugly?";
+					break;
+					case 2:
+					ph2 = " nice lookin?";
+					break;
+					case 3:
+					ph2 = " for breakfast?";
+					break;
+					case 4:
+					ph1="";
+					ph2 = " send money for no reason";
+					break;
+					case 5: 
+					ph2 = "? ";
+					break;
+					}
+			break;
+		case 3:
+			ph1 = "How";
+			switch (y){
+					case 1:
+					ph2 = " is your day so far?";
+					break;
+					case 2:
+					ph2 = " do you always take so long to get out of bed?";
+					break;
+					case 3:
+					ph2 = " am I supposed to come up with a compliment when the guy who programmed me has a negative outlook on life?";
+					break;
+					case 4:
+					ph2 = " about yo get ahead of your homework.";
+					break;
+					case 5: 
+					ph2 = " was your nap?";
+					break;
+					}
+			break;
+		case 4:
+			ph1 = "You sure have a way with";
+			switch (y){
+					case 1:
+					ph2 = " insomnia.";
+					break;
+					case 2:
+					ph2 = " sleeping in";
+					break;
+					case 3:
+					ph2 = " being rude.";
+					break;
+					case 4:
+					ph2 = " googling the answers to every problem you face.";
+					break;
+					case 5: 
+					ph2 = " not getting ready fast enough.";
+					break;
+					}
+			break;
+		case 5:
+			ph1 = "could you not";
+			switch (y){
+					case 1:
+					ph2 = " wake up so loudly?";
+					break;
+					case 2:
+					ph2 = " be yourself for 5 minutes?";
+					break;
+					case 3:
+					ph2 = " wake me up next time?";
+					break;
+					case 4:
+					ph2 = " fail at life";
+					break;
+					case 5: 
+					ph2 = " be a dissapointment to your friends and family?";
+					break;
+					}
+			break;
+	
+	
+	}
+	
+	
+	document.getElementById('compliment').innerHTML = ph1 + ph2;
+	}
+
+	
+	
+
+</script> 
+ 
+ 
+ <head>
+<style>
+
+
+
+  </style>
+  </head>
+   <div id = "weather"></div>
+   <title>MAJIC MIRROR</title>
+	<body style = "background-color:black" onload = "startTime(); compliments()" >
+	<div  style= "color:white; font-size:75px;"  id= "txt" align="center" ></div>
+	
+	
+	
+	<div  style= "color:white; font-size:75px;"  id= "compliment" align="bottom" ></div>
+		
+	 
+
+
+	</body>
+ 
+  <span style='display:block !important; width: 276px; text-align: center; font-family: sans-serif; font-size: 12px;'><a href='http://www.wunderground.com/cgi-bin/findweather/getForecast?query=San Francisco, CA' title='San Francisco, CA Weather Forecast'><img src='http://weathersticker.wunderground.com/weathersticker/sunandmoon/language/english/US/CA/San_Francisco.gif' alt='Find more about Weather in San Francisco, CA' /></a><br><a href='http://www.wunderground.com' title='Get latest Weather Forecast updates' style='font-family: sans-serif; font-size: 12px;'>Click for weathe
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
