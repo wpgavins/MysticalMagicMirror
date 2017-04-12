@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+
+
+<html>
+<script>
+	function startTime(){
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var s = today.getSeconds();
+		m = checkTime(m);
+		s = checkTime(s);
+		document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+		var t = setTimeout(startTime,500);
+	}
+
+	function checkTime(i){
+		if(i<10){i= "0" + i};
+		return i;
+	}
+</script>
+ 
+<script>
+	function startDate(){
+		var date = new Date();
+		var y = date.getFullYear();
+		var m = date.getMonth() + 1;
+		var d = date.getDate();
+		document.getElementById('date').innerHTML = m + "/" + d + "/" + y;
+	}
+</script>
+
+<script>
+	function compliments(){
+	var x = Math.round(Math.random()*(4)+1);
+	var y = Math.round(Math.random()*(4)+1);	
+	var ph1 = "";
+	var ph2 = "";
+	
+	switch(x){
+		case 1:
+			ph1 = "do you always wake up so";
+			switch (y){
+					case 1:
+					ph2 = " loudly?";
+					break;
+					case 2:
+					ph2 = " nice lookin?";
+					break;
+					case 3:
+					ph2 = " tired looking?";
+					break;
+					case 4:
+					ph2 = " dead inside";
+					break;
+					case 5: 
+					ph2 = " ready to take on the day?";
+					break;
+					}
+			break;
+		case 2:
+			ph1 = "what's cookin";
+			switch (y){
+					case 1:
+					ph2 = " ugly?";
+					break;
+					case 2:
+					ph2 = " nice lookin?";
+					break;
+					case 3:
+					ph2 = " for breakfast?";
+					break;
+					case 4:
+					ph1="";
+					ph2 = " send money for no reason";
+					break;
+					case 5: 
+					ph2 = "? ";
+					break;
+					}
+			break;
+		case 3:
+			ph1 = "How";
+			switch (y){
+					case 1:
+					ph2 = " is your day so far?";
+					break;
+					case 2:
+					ph2 = " do you always take so long to get out of bed?";
+					break;
+					case 3:
+					ph2 = " am I supposed to come up with a compliment when the guy who programmed me has a negative outlook on life?";
+					break;
+					case 4:
+					ph2 = " about yo get ahead of your homework.";
+					break;
+					case 5: 
+					ph2 = " was your nap?";
+					break;
+					}
+			break;
+		case 4:
+			ph1 = "You sure have a way with";
+			switch (y){
+					case 1:
+					ph2 = " insomnia.";
+					break;
+					case 2:
+					ph2 = " sleeping in";
+					break;
+					case 3:
+					ph2 = " being rude.";
+					break;
+					case 4:
+					ph2 = " googling the answers to every problem you face.";
+					break;
+					case 5: 
+					ph2 = " not getting ready fast enough.";
+					break;
+					}
+			break;
+		case 5:
+			ph1 = "could you not";
+			switch (y){
+					case 1:
+					ph2 = " wake up so loudly?";
+					break;
+					case 2:
+					ph2 = " be yourself for 5 minutes?";
+					break;
+					case 3:
+					ph2 = " wake me up next time?";
+					break;
+					case 4:
+					ph2 = " fail at life";
+					break;
+					case 5: 
+					ph2 = " be a dissapointment to your friends and family?";
+					break;
+					}
+			break;
+	
+	
+	}
+	
+	
+	document.getElementById('compliment').innerHTML = ph1 + ph2;
+	}
+
+	
+	
+
+</script> 
+
+
+ <head>
+<style type = "text/css">
+	.footer{
+		position: fixed;
+		text-align: center;
+		bottom: 0px;
+		width: 20%;
+	}
+	
+	.footer2{
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		width: 20%;
+	}
+  </style>
+  </head>
+
+   <title>MAGIC MIRROR</title>
+	<body style = "background-color:black;" onload = "startTime(); startDate(); compliments()" >
+	<div  style= "color:white; font-size:75px;" id= "txt" align="center" > </div>
+	<div  style= "color:white; font-size:75px;" id= "date" align="center" > </div>
+	<div  style= "color:white; font-size:75px;"  id= "compliment" align="center" ></div>
+	<img class = "footer" src = "https://lh4.googleusercontent.com/-Z_l_oU4Djuo/VDQgDuSRfOI/AAAAAAAAABM/Q1WperH078Q/SNOOP.gif" align = "left-side" alt = "snoop" > 
+	<span style="display: block !important; width: 320px; text-align: middle; font-family: sans-serif; font-size: 12px;">
+	<a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:50010.1.99999&bannertypeclick=wu_clean2day" title="Ames, Iowa Weather Forecast" target="_blank">
+	<img class = "footer2" src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_clean2day_cond&airportcode=KAMW&ForcedCity=Ames&ForcedState=IA&zip=50010&language=EN" alt="Find more about Weather in Ames, IA" width="400" /></a><br><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:50010.1.99999&bannertypeclick=wu_clean2day" title="Get latest Weather Forecast updates" style="font-family: sans-serif; font-size: 12px" target="_blank"></a></span>
+	</body>
+  
+
+  
+</html>
